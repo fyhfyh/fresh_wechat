@@ -90,5 +90,7 @@ Page({
   onReachBottom: function () {
     this.getProductReplyList();
   },
-
+  onShow:function(){
+    app.checkLogin_status();
+  }
 })

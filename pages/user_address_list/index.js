@@ -35,6 +35,7 @@ Page({
     })
   },
   onShow:function(){
+    app.checkLogin_status();
     var that = this;
     if (app.globalData.isLog) that.getAddressList(true);
   },

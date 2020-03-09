@@ -122,7 +122,7 @@ const checkLogin = function (token, expiresTime, isLog)
     token = getApp().globalData.token;
     expiresTime = getApp().globalData.expiresTime;
     isLog = getApp().globalData.isLog;
-  }
+  } 
   let res = token ? true : false;
   let res1 = isLog;
   let res2 = res && res1;

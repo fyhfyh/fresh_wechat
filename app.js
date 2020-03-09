@@ -11,13 +11,15 @@ App({
     let that = this;
     let token = wx.getStorageSync(CACHE_TOKEN);
     let expiresTime = wx.getStorageSync(CACHE_EXPIRES_TIME);
-    let userInfo = wx.getStorageSync(CACHE_USERINFO);
+    let userInfo = wx.getStorageSync(CACHE_USERINFO); 
     this.globalData.isLog = !!userInfo && util.checkLogin(token, expiresTime,true);
+
     if (this.globalData.isLog) {
       this.globalData.token = token;
       this.globalData.expiresTime = expiresTime;
       this.globalData.userInfo = userInfo ? JSON.parse(userInfo) : {};
     }
+
     if (option.query.hasOwnProperty('scene')){
       switch (option.scene) {
         //扫描小程序码
@@ -38,6 +40,7 @@ App({
           break;
       }
     }
+    
     // 获取导航高度；
     wx.getSystemInfo({
       success: res => {
@@ -116,4 +119,12 @@ App({
   * @return array
   */
   SplitArray: function (list, sp) { return util.SplitArray(list, sp)},
+
+  checkLogin_status(){
+    if (!wx.getStorageSync(CACHE_USERINFO)) {
+      wx.redirectTo({
+        url: '/pages/user_login/index',
+      })
+    } console.log(123456789);
+  }
 })

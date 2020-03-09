@@ -68,7 +68,9 @@ Page({
   onLoad: function (options) {
 
   },
-  
+  onShow:function(){
+    app.checkLogin_status();
+  },
   nav:function(e){
      this.setData({
        current: e.currentTarget.dataset.idx

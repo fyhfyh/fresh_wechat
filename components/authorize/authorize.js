@@ -104,6 +104,7 @@ Component({
       userInfo.spread_spid = app.globalData.spid;//获取推广人ID
       userInfo.spread_code = app.globalData.code;//获取推广人分享二维码ID
       login(userInfo).then(res => {
+        console.log(res);
         app.globalData.token = res.data.token;
         app.globalData.isLog = true;
         app.globalData.userInfo = res.data.userInfo;

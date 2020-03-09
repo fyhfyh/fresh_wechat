@@ -76,6 +76,9 @@ Page({
   ChangCouponsClone:function(){
     this.setData({'coupon.coupon':false});
   },
+  onShow:function(){
+    app.checkLogin_status();
+  },
   /*
   * 获取用户信息
   */

@@ -6,6 +6,14 @@ import request from "./../utils/request.js";
 */
 
 /**
+ * 客户账密登录
+ * @param data object 小程序客户账密登录信息
+ */
+export function account_login(data) {
+  return request.post("login", data, { noAuth: true });
+}
+
+/**
  * 小程序用户登录
  * @param data object 小程序用户登陆信息
  */

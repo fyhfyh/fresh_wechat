@@ -22,6 +22,9 @@ Page({
     index: 0,
     orderId:0,
   },
+  onShow:function(){
+    app.checkLogin_status();
+  },
   /**
    * 授权回调
    * 

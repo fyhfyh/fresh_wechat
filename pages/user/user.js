@@ -101,6 +101,7 @@ Page({
     
   },
   onShow:function(){
+    app.checkLogin_status();
     let that = this;
     if (app.globalData.isLog){ 
       this.getUserInfo();
