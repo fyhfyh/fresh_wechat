@@ -125,6 +125,6 @@ App({
       wx.redirectTo({
         url: '/pages/user_login/index',
       })
-    } console.log(123456789);
+    } 
   }
 })

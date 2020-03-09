@@ -81,5 +81,13 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  onShow:function(){
+    
+    if (wx.getStorageSync(CACHE_USERINFO)) {
+      wx.switchTab ({
+        url: "/pages/index/index",
+      })
+    } 
   }
 })

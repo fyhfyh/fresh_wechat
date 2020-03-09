@@ -1,7 +1,7 @@
 <view class="register absolute">
   <view class="shading">
     <view class="pictrue acea-row row-center-wrapper">
-      <image src='/images/logo2.png' id="img-logo"></image>
+      <image src='/images/logo3.png' id="img-logo"></image>
 
     </view>
   </view>
