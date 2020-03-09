@@ -41,13 +41,13 @@
         </view>
         <view class='orderState acea-row row-middle'>
            <view class='item' data-url='/pages/order_list/index?status=0' bindtap='goPages'>
-              <view class='pictrue'>
+              <!-- <view class='pictrue'>
                 <image src='/images/dfk.png'></image>
                 <text class="order-status-num" wx:if="{{orderStatusNum.unpaid_count > 0}}">{{ orderStatusNum.unpaid_count }}</text>
               </view>
               <view>待付款</view>
            </view>
-            <view class='item' data-url='/pages/order_list/index?status=1' bindtap='goPages'>
+            <view class='item' data-url='/pages/order_list/index?status=1' bindtap='goPages'> -->
               <view class='pictrue'>
                 <image src='/images/dfh.png'></image>
                 <text class="order-status-num" wx:if="{{orderStatusNum.unshipped_count > 0}}">{{ orderStatusNum.unshipped_count }}</text>
@@ -73,7 +73,7 @@
               <image src='/images/sh.png'></image>
               <text class="order-status-num" wx:if="{{orderStatusNum.refund_count > 0}}">{{ orderStatusNum.refund_count }}</text>
               </view>
-              <view>售后/退款</view>
+              <view>售后</view>
            </view>
         </view>
       </view>
