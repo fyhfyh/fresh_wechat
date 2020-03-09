@@ -102,6 +102,9 @@ Page({
       });
     });
   },
+  onShow: function () {
+    app.checkLogin_status();
+  },
   /**
    * 获取任务要求
   */
@@ -110,6 +113,7 @@ Page({
     userLevelTask(that.data.level_id).then(res=>{
       that.setData({ task: res.data.task, reach_count: res.data.reach_count });
     });
+  
   },
 
 

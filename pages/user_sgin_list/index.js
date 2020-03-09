@@ -35,7 +35,9 @@ Page({
   onLoad: function (options) {
 
   },
-
+  onShow:function(){
+    app.checkLogin_status();
+  },
   /**
    * 获取签到记录列表
   */

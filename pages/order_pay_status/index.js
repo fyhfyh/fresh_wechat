@@ -20,6 +20,9 @@ Page({
   onLoadFun:function(){
     this.getOrderPayInfo();
   },
+  onShow:function(){
+    app.checkLogin_status();
+  },
   /**
    * 生命周期函数--监听页面加载
    */

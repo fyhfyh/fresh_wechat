@@ -1,0 +1,28 @@
+<view class="register absolute">
+  <view class="shading">
+    <view class="pictrue acea-row row-center-wrapper">
+      <image src='/images/logo2.png' id="img-logo"></image>
+
+    </view>
+  </view>
+<view class="whiteBg">
+  <view class="list">
+  <form>
+      <view class="item">
+        <view class="acea-row row-between-wrapper" >
+           <view class="iconfont icon-phone_"></view>
+            <input placeholder="请输入账号" bindinput="get_account" class="input-login" auto-focus/>
+        </view>
+      </view>
+        <view class="item">
+        <view class="acea-row row-between-wrapper" >
+            <view class="iconfont icon-code_"></view>
+            <input placeholder="请输入登录密码" type="text"  bindinput="get_pwd" password class="input-login" auto-focus />
+        </view>
+      </view>
+      <view class="logon" bindtap="userlogin">登录</view>
+  </form>
+  </view>
+</view>
+<view class="bottom"></view>
+</view>

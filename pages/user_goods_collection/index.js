@@ -37,6 +37,9 @@ Page({
   onLoad: function (options) {
 
   },
+  onShow:function(){
+    app.checkLogin_status();
+  },
   /**
    * 获取收藏产品
   */

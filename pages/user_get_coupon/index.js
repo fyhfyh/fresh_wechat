@@ -51,7 +51,9 @@ Page({
   onLoad: function (options) {
 
   },
-
+  onShow:function(){
+    app.checkLogin_status();
+  },
   /**
    * 获取领取优惠券列表
   */

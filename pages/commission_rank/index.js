@@ -80,6 +80,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    app.checkLogin_status();
     if (this.data.isClone && app.globalData.isLog){
       this.setData({ page: 1, loadend: false, rankList:{}});
       this.getBrokerageRankList();

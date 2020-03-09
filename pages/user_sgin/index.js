@@ -39,7 +39,9 @@ Page({
     this.getSignSysteam();
     this.getSignList();
   },
-
+  onShow:function(){
+    app.checkLogin_status();
+  },
   /**
    * 获取签到配置
   */

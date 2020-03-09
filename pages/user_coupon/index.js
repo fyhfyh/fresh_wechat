@@ -49,6 +49,8 @@ Page({
   onReachBottom: function () {
 
   },
-
+  onShow:function(){
+    app.checkLogin_status();
+  }
 
 })

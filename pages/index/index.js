@@ -81,6 +81,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    app.checkLogin_status();
     this.getIndexConfig();
     if(app.globalData.isLog && app.globalData.token) this.get_issue_coupon_list();
   },

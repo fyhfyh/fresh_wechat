@@ -44,6 +44,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    app.checkLogin_status();
     var type = this.data.type;
     if (type == 1) {
       this.setData({ 'parameter.title': '提现记录', name: '提现总额', recordType: 4 });
