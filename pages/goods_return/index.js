@@ -13,7 +13,7 @@ Page({
     parameter: {
       'navbar': '1',
       'return': '1',
-      'title': '申请退货',
+      'title': '取消订单',
       'color': false
     },
     refund_reason_wap_img:[],

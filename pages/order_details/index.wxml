@@ -167,7 +167,7 @@
    <view style='height:120rpx;'></view>
    <view class='footer acea-row row-right row-middle' wx:if="{{isGoodsReturn==false || status.type == 9}}">
       <view class='bnt bg-color' wx:if="{{status.type==0}}" data-order_id='{{orderInfo.order_id}}' bindtap='pay_open'>立即付款</view>
-      <view bindtap="openSubcribe" class='bnt cancel' wx:elif="{{status.type==1}}" hover-class='none' data-url='/pages/goods_return/index?orderId={{orderInfo.order_id}}'>申请退款</view>
+      <!-- <view bindtap="openSubcribe" class='bnt cancel' wx:elif="{{status.type==1}}" hover-class='none' data-url='/pages/goods_return/index?orderId={{orderInfo.order_id}}'>取消订单</view> -->
       <view class='bnt bg-color' wx:if="{{status.class_status==1}}" bindtap='goJoinPink'>查看拼团</view>
       <navigator class='bnt cancel' wx:if="{{orderInfo.delivery_type == 'express' && status.class_status==3 && status.type==2}}" hover-class='none' url='/pages/goods_logistics/index?orderId={{orderInfo.order_id}}'>查看物流</navigator>
       <view class='bnt bg-color' wx:if="{{status.class_status==3}}" bindtap='confirmOrder'>确认收货</view>
