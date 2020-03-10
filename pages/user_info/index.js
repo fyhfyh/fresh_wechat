@@ -2,7 +2,7 @@ import { getUserInfo, userEdit} from '../../api/user.js';
 import { switchH5Login } from '../../api/api.js';
 import authLogin from '../../utils/autuLogin.js';
 import util from '../../utils/util.js';
-
+import { CACHE_USERINFO, CACHE_TOKEN, CACHE_EXPIRES_TIME } from '../../config.js';
 const app = getApp();
 
 Page({
@@ -79,11 +79,15 @@ Page({
       app.globalData.isLog = false;
       app.globalData.userInfo = {};
       app.globalData.expiresTime = 0;
+      wx.removeStorageSync(CACHE_USERINFO);
+      wx.removeStorageSync(CACHE_TOKEN);
+      wx.removeStorageSync(CACHE_EXPIRES_TIME);
       wx.showLoading({
         title: '正在退出登录',
       });
-      return wx.switchTab({
-        url: '/pages/index/index',
+      
+      return wx.navigateTo({
+        url: '/pages/user_login/index',
         success: function () {
           wx.hideLoading();
         }
