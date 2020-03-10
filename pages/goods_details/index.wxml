@@ -17,19 +17,19 @@
       <view>库存:{{storeInfo.stock}}{{storeInfo.unit_name}}</view>
       <view>销量:{{storeInfo.fsales}}{{storeInfo.unit_name}}</view>
     </view>
-    <view class='coupon acea-row row-between-wrapper' wx:if="{{storeInfo.give_integral > 0}}">
+    <!-- <view class='coupon acea-row row-between-wrapper' wx:if="{{storeInfo.give_integral > 0}}">
       <view class='hide line1 acea-row'>
         赠积分：
         <view class='activity'>赠送 {{storeInfo.give_integral}} 积分</view>
       </view>
-    </view>
-    <view class='coupon acea-row row-between-wrapper' bindtap='coupon' style="{{ storeInfo.give_integral > 0 ? 'margin-top:0;':''}}">
+    </view> -->
+    <!-- <view class='coupon acea-row row-between-wrapper' bindtap='coupon' style="{{ storeInfo.give_integral > 0 ? 'margin-top:0;':''}}">
       <view class='hide line1 acea-row'>
         优惠券：
         <view class='activity' wx:for="{{couponList}}" wx:key>满{{item.use_min_price}}减{{item.coupon_price}}</view>
       </view>
       <view class='iconfont icon-jiantou'></view>
-    </view>
+    </view> -->
   </view>
   <view class='attribute acea-row row-between-wrapper' bindtap='selecAttr'>
     <view>{{attr}}：
