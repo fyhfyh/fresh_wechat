@@ -26,7 +26,7 @@ view{box-sizing:border-box;}
 .acea-row.row-center-wrapper{align-items:center;justify-content:center;}
 .acea-row.row-between-wrapper{align-items:center;justify-content:space-between;}
 .font-color{color:#fc4141!important;}
-.bg-color{background-color:#e93323!important;}
+.bg-color{background-color:#44c58c!important;}
 .icon-color{color:#ff3c2b;}
 .cart-color{color:#ff3700!important;border:1px solid #ff3700!important;}
 /* 单选 */

@@ -16,7 +16,7 @@
       <text class='iconfont icon-shezhi' bindtap='Setting'></text>
    </view>
    <view class='wrapper'>
-      <view class='nav acea-row row-middle'>
+      <!-- <view class='nav acea-row row-middle'>
          <view class='item' data-url='/pages/user_money/index' bindtap='goPages'>
             <view>我的余额</view>
             <view class='num'>{{userInfo.now_money || 0}}</view>
@@ -33,7 +33,7 @@
             <view>优惠券</view>
             <view class='num'>{{userInfo.couponCount || 0}}</view>
          </view>
-      </view>
+      </view> -->
       <view class='myOrder'>
         <view class='title acea-row row-between-wrapper'>
            <view>我的订单</view>

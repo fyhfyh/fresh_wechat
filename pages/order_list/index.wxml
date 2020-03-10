@@ -12,10 +12,10 @@
     </view>
   </view>
   <view class='nav acea-row row-around'>
-    <view class='item {{orderStatus==0 ? "on": ""}}' data-status="0" bindtap="statusClick">
+    <!-- <view class='item {{orderStatus==0 ? "on": ""}}' data-status="0" bindtap="statusClick">
       <view>待付款</view>
       <view class='num'>{{orderData.unpaid_count || 0}}</view>
-    </view>
+    </view> -->
     <view class='item {{orderStatus==1 ? "on": ""}}' data-status="1" bindtap="statusClick">
       <view>待发货</view>
       <view class='num'>{{orderData.unshipped_count || 0}}</view>

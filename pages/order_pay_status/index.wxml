@@ -4,7 +4,7 @@
    <view class='iconfont icon-duihao2 bg-color' wx:if="{{order_pay_info.paid || order_pay_info.pay_type == 'offline'}}"></view>
    <view class='iconfont icon-iconfontguanbi bg-color' wx:else></view>
    <!-- 失败时：订单支付失败 -->
-   <view class='status' wx:if="{{order_pay_info.pay_type != 'offline'}}">{{order_pay_info.paid ? '订单支付成功':'订单支付失败'}}</view>
+   <view class='status' wx:if="{{order_pay_info.pay_type != 'offline'}}">{{order_pay_info.paid ? '下单成功':'下单失败'}}</view>
    <view class='status' wx:else>订单创建成功</view>
    <view class='wrapper'>
       <view class='item acea-row row-between-wrapper'>
@@ -15,12 +15,12 @@
          <view>下单时间</view>
          <view class='itemCom'>{{order_pay_info._pay_time}}</view>
       </view>
-      <view class='item acea-row row-between-wrapper'>
+      <!-- <view class='item acea-row row-between-wrapper'>
          <view>支付方式</view>
          <view class='itemCom'>{{order_pay_info._status._payType}}</view>
-      </view>
+      </view> -->
       <view class='item acea-row row-between-wrapper'>
-         <view>支付金额</view>
+         <view>订单金额</view>
          <view class='itemCom'>{{order_pay_info.pay_price}}</view>
       </view>
       <!--失败时加上这个  -->

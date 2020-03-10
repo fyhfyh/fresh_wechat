@@ -33,13 +33,13 @@
   </view>
   <orderGoods cartInfo="{{cartInfo}}"></orderGoods>
   <view class='wrapper'>
-    <view class='item acea-row row-between-wrapper' bindtap='coupon' wx:if="{{!pinkId && !BargainId && !combinationId && !seckillId}}">
+    <!-- <view class='item acea-row row-between-wrapper' bindtap='coupon' wx:if="{{!pinkId && !BargainId && !combinationId && !seckillId}}">
       <view>优惠券</view>
       <view class='discount'>{{couponTitle}}
         <text class='iconfont icon-jiantou'></text>
       </view>
-    </view>
-    <view class='item acea-row row-between-wrapper' wx:if="{{!pinkId && !BargainId && !combinationId && !seckillId}}">
+    </view> -->
+    <!-- <view class='item acea-row row-between-wrapper' wx:if="{{!pinkId && !BargainId && !combinationId && !seckillId}}">
       <view>积分抵扣</view>
       <view class='discount acea-row row-middle'>
         <view> {{useIntegral ? "剩余积分":"当前积分"}}
@@ -49,11 +49,11 @@
           <checkbox checked='{{useIntegral ? true : false}}' />
         </checkbox-group>
       </view>
-    </view>
-    <view class='item acea-row row-between-wrapper' wx:if="{{priceGroup.vipPrice > 0 && userInfo.vip && !pinkId && !BargainId && !combinationId && !seckillId}}">
+    </view> -->
+    <!-- <view class='item acea-row row-between-wrapper' wx:if="{{priceGroup.vipPrice > 0 && userInfo.vip && !pinkId && !BargainId && !combinationId && !seckillId}}">
       <view>会员优惠</view>
       <view class='discount'>-￥{{priceGroup.vipPrice}}</view>
-    </view>
+    </view> -->
     <view class='item acea-row row-between-wrapper' wx:if='{{shippingType==0}}'>
       <view>快递费用</view>
       <view class='discount' wx:if='{{priceGroup.storePostage > 0}}'>+￥{{priceGroup.storePostage}}</view>
@@ -82,7 +82,7 @@
       <textarea wx:if="{{coupon.coupon===false}}" placeholder-class='placeholder' bindinput='bindHideKeyboard' value="" name="mark" placeholder='请添加备注（150字以内）'></textarea>
     </view>
   </view>
-  <view class='wrapper'>
+  <!-- <view class='wrapper'>
     <view class='item'>
       <view>支付方式</view>
       <view class='list'>
@@ -93,20 +93,20 @@
         </view>
       </view>
     </view>
-  </view>
+  </view> -->
   <view class='moneyList'>
     <view class='item acea-row row-between-wrapper'>
       <view>商品总价：</view>
       <view class='money'>￥{{priceGroup.totalPrice}}</view>
     </view>
-    <view class='item acea-row row-between-wrapper' wx:if="{{coupon_price > 0}}">
+    <!-- <view class='item acea-row row-between-wrapper' wx:if="{{coupon_price > 0}}">
       <view>优惠券抵扣：</view>
       <view class='money'>-￥{{coupon_price}}</view>
     </view>
     <view class='item acea-row row-between-wrapper' wx:if="{{integral_price > 0}}">
       <view>积分抵扣：</view>
       <view class='money'>-￥{{integral_price}}</view>
-    </view>
+    </view> -->
     <view class='item acea-row row-between-wrapper' wx:if="{{priceGroup.storePostage > 0}}">
       <view>运费：</view>
       <view class='money'>+￥{{priceGroup.storePostage}}</view>
@@ -117,7 +117,7 @@
     <view>合计:
       <text class='font-color'>￥{{totalPrice || 0}}</text>
     </view>
-    <view class='settlement' style='z-index:100' bindtap="SubOrder">立即结算</view>
+    <view class='settlement' style='z-index:100' bindtap="SubOrder">立即下单</view>
   </view>
 </view>
 <coupon-list-window coupon='{{coupon}}' bind:ChangCouponsClone="ChangCouponsClone" openType='{{openType}}' bind:ChangCoupons="ChangCoupons"></coupon-list-window>
