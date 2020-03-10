@@ -20,7 +20,7 @@
               <image src='{{item.avatar}}'></image>
             </view>
             <view class="text">
-              <view class="name line1">{{ item.nickname }}</view>
+              <view class="name line1">{{ item.account }}</view>
               <view class="phone" wx:if="{{item.phone && item.user_type !='h5' }}">绑定手机号：{{ item.phone }}</view>
               <view class="phone" wx:elif="{{item.phone && item.user_type =='h5' }}">账号：{{ item.phone }}</view>
               <view class="phone" wx:else>暂未绑定手机号</view>

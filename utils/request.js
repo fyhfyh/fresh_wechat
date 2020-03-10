@@ -7,10 +7,10 @@ import { HEADER , TOKENNAME} from './../config.js';
 export default function request(api, method, data, {noAuth = false, noVerify = false})
 {
   let Url = getApp().globalData.url, header = HEADER;
-  if (!noAuth) {
-    //登录过期自动登录
-    if (!util.checkLogin()) return authLogin().then(res => { return request(api, method, data, { noAuth, noVerify}); });
-  }
+  // if (!noAuth) {
+  //   //登录过期自动登录
+  //   if (!util.checkLogin()) return authLogin().then(res => { return request(api, method, data, { noAuth, noVerify}); });
+  // }
   
   if (getApp().globalData.token) header[TOKENNAME] = 'Bearer ' + getApp().globalData.token;
 

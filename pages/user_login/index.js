@@ -54,7 +54,7 @@ Page({
     let that = this;
     wx.showLoading({ title: '正在登录中' });
     account_login({account:account,password:password}).then(res=>{
-     
+      
       app.globalData.token = res.data.token;
       app.globalData.userInfo = res.data.userInfo;
       app.globalData.isLog = true;

@@ -5,7 +5,7 @@
          <view class='pictrue' data-url='/pages/user_info/index' bindtap='goPages'><image src='{{userInfo.avatar}}'></image></view>
          <view class='text'>
             <view class='acea-row row-middle'>
-               <!-- <view class='name line1' data-url='/pages/user_info/index' bindtap='goPages'>{{userInfo.uid ? userInfo.nickname : '请点击授权'}}</view> -->
+               <view class='name line1' data-url='/pages/user_info/index' bindtap='goPages'>{{userInfo.uid ? userInfo.account : userInfo.account}}</view>
                <view data-url='/pages/user_vip/index' class='member acea-row row-middle' wx:if="{{userInfo.vip}}" bindtap='goPages'>
                <image src='{{userInfo.vip_icon}}'></image>{{userInfo.vip_name}}</view>
             </view>
