@@ -126,7 +126,7 @@ App({
   * @param array sp 原始数组
   * @return array
   */
-<<<<<<< HEAD
+
   SplitArray: function (list, sp) { return util.SplitArray(list, sp)},
 
   checkLogin_status(){
@@ -138,7 +138,5 @@ App({
       })
     } 
   }
-=======
-  SplitArray: function (list, sp) { return util.SplitArray(list, sp)}
->>>>>>> 202d34416769d3ec1cf16ae05d707582efd35042
+
 })
