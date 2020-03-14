@@ -384,7 +384,8 @@ Page({
   joinCart:function(e){
     //是否登录
     if (app.globalData.isLog === false)
-      this.setData({isAuto: true,iShidden: false,});
+      app.checkLogin_status();
+      // this.setData({isAuto: true,iShidden: false,});
     else{
       this.goCat();
     }

@@ -1,15 +1,18 @@
 import util from './util.js';
 import authLogin from './autuLogin.js';
-import { HEADER , TOKENNAME} from './../config.js';
+import { HEADER, TOKENNAME, CACHE_EXPIRES_TIME} from './../config.js';
 /**
  * 发送请求
  */
 export default function request(api, method, data, {noAuth = false, noVerify = false})
 {
   let Url = getApp().globalData.url, header = HEADER;
-  // if (!noAuth) {
+  // if (!noAuth) {   
   //   //登录过期自动登录
-  //   if (!util.checkLogin()) return authLogin().then(res => { return request(api, method, data, { noAuth, noVerify}); });
+  //   let newTime = Math.round(new Date() / 1000); 
+  //   let end_time = wx.getStorageSync(CACHE_EXPIRES_TIME) - newTime;
+  //   console.log(end_time)
+  //   if (end_time >30*60) return authLogin().then(res => { return request(api, method, data, { noAuth, noVerify}); });
   // }
   
   if (getApp().globalData.token) header[TOKENNAME] = 'Bearer ' + getApp().globalData.token;

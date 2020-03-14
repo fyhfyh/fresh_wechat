@@ -34,7 +34,7 @@ Page({
       'return':'0'
     },
     window: false,
-    iShidden:false,
+    iShidden:true,
     navH: "",
     newGoodsBananr:'',
   },
