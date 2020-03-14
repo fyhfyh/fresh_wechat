@@ -3,6 +3,14 @@ import Server from './utils/Server.js';
 import util from './utils/util.js';
 
 App({
+
+  checkLogin_status() {
+    if (!wx.getStorageSync(CACHE_USERINFO)) {
+      wx.redirectTo({
+        url: '/pages/user_login/index',
+      })
+    }
+  },
   onLaunch: function (option) {
     if (HTTP_REQUEST_URL==''){
       console.error("请配置根目录下的config.js文件中的 'HTTP_REQUEST_URL'\n\n请修改开发者工具中【详情】->【AppID】改为自己的Appid\n\n请前往后台【小程序】->【小程序配置】填写自己的 appId and AppSecret");
@@ -118,6 +126,7 @@ App({
   * @param array sp 原始数组
   * @return array
   */
+<<<<<<< HEAD
   SplitArray: function (list, sp) { return util.SplitArray(list, sp)},
 
   checkLogin_status(){
@@ -129,4 +138,7 @@ App({
       })
     } 
   }
+=======
+  SplitArray: function (list, sp) { return util.SplitArray(list, sp)}
+>>>>>>> 202d34416769d3ec1cf16ae05d707582efd35042
 })

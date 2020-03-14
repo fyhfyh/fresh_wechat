@@ -86,6 +86,13 @@
 					"pathName": "pages/order_details/index",
 					"query": "order_id=wx158376675252549575",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/goods_return/index",
+					"pathName": "pages/goods_return/index",
+					"query": "order_id=wx158376675252549575",
+					"scene": null
 				}
 			]
 		}
