@@ -26,17 +26,18 @@ Page({
     selectValue:[],//选中的数据
     selectCountPrice:0.00,
     isGoIndex: true,
-    iShidden: false,
+    iShidden: true,
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    app.checkLogin_status();
     var that = this;
     that.setData({
       navH: app.globalData.navHeight
     });
-    if (app.globalData.token) that.setData({ iShidden:true});
+  //  if (app.globalData.token) that.setData({ iShidden:true});
   },
 
   /**

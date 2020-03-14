@@ -12,13 +12,12 @@ App({
     let token = wx.getStorageSync(CACHE_TOKEN);
     let expiresTime = wx.getStorageSync(CACHE_EXPIRES_TIME);
     let userInfo = wx.getStorageSync(CACHE_USERINFO); 
-    this.globalData.isLog = !!userInfo && util.checkLogin(token, expiresTime,true);
-
-    if (this.globalData.isLog) {
-      this.globalData.token = token;
-      this.globalData.expiresTime = expiresTime;
-      this.globalData.userInfo = userInfo ? JSON.parse(userInfo) : {};
-    }
+   // this.globalData.isLog = false;
+   
+    this.globalData.token = token;
+    this.globalData.expiresTime = expiresTime;
+    this.globalData.userInfo = userInfo ? JSON.parse(userInfo) : {};
+    
 
     if (option.query.hasOwnProperty('scene')){
       switch (option.scene) {
@@ -74,6 +73,7 @@ App({
     //实例化聊天服务
     this.$chat = new Server(this);
   },
+
   $chat:null,
   globalData: {
     navHeight: 0,
@@ -84,7 +84,7 @@ App({
     urlImages: '',
     url: HTTP_REQUEST_URL,
     token: '',
-    isLog:false,
+    isLog:true,
     expiresTime:0,
     MyMenus:[],
     userInfo:{},
@@ -121,7 +121,9 @@ App({
   SplitArray: function (list, sp) { return util.SplitArray(list, sp)},
 
   checkLogin_status(){
-    if (!wx.getStorageSync(CACHE_USERINFO)) {
+    let newTime = Math.round(new Date() / 1000);
+    
+    if (!wx.getStorageSync(CACHE_USERINFO) || wx.getStorageSync(CACHE_EXPIRES_TIME) < newTime ) {
       wx.redirectTo({
         url: '/pages/user_login/index',
       })

@@ -2,7 +2,6 @@ const app = getApp();
 
 import { getMenuList, getUserInfo} from '../../api/user.js';
 import { switchH5Login } from '../../api/api.js';
-import authLogin from '../../utils/autuLogin.js';
 import util from '../../utils/util.js';
 
 Page({
@@ -62,6 +61,7 @@ Page({
   getUserInfo:function(){
     var that=this;
     getUserInfo().then(res=>{
+
       that.setData({ userInfo: res.data, loginType: res.data.login_type, orderStatusNum: res.data.orderStatusNum});
     });
   },
@@ -101,12 +101,12 @@ Page({
     
   },
   onShow:function(){
+    
     app.checkLogin_status();
     let that = this;
-    if (app.globalData.isLog){ 
-      this.getUserInfo();
-      this.getMyMenus();
-    }
+    this.getUserInfo();
+    this.getMyMenus();
+    
   },
 
   /**
