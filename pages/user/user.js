@@ -70,6 +70,7 @@ Page({
   */
   goPages:function(e){
     if(app.globalData.isLog){
+      console.log(app.globalData.isLog);
       if (e.currentTarget.dataset.url == '/pages/user_spread_user/index' && this.data.userInfo.statu==1) {
         if (!this.data.userInfo.is_promoter) return app.Tips({ title: '您还没有推广权限！！' });
       }

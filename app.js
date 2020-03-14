@@ -5,10 +5,18 @@ import util from './utils/util.js';
 App({
 
   checkLogin_status() {
-    if (!wx.getStorageSync(CACHE_USERINFO)) {
+    let token = wx.getStorageSync(CACHE_TOKEN);
+    let expiresTime = wx.getStorageSync(CACHE_EXPIRES_TIME);
+    let userInfo = wx.getStorageSync(CACHE_USERINFO); 
+    if (!userInfo) {
       wx.redirectTo({
         url: '/pages/user_login/index',
       })
+    }
+    else{
+      this.globalData.token = token;
+      this.globalData.expiresTime = expiresTime;
+      this.globalData.userInfo = userInfo ? JSON.parse(userInfo) : {};
     }
   },
   onLaunch: function (option) {
@@ -20,13 +28,12 @@ App({
     let token = wx.getStorageSync(CACHE_TOKEN);
     let expiresTime = wx.getStorageSync(CACHE_EXPIRES_TIME);
     let userInfo = wx.getStorageSync(CACHE_USERINFO); 
-    this.globalData.isLog = !!userInfo && util.checkLogin(token, expiresTime,true);
-
-    if (this.globalData.isLog) {
-      this.globalData.token = token;
-      this.globalData.expiresTime = expiresTime;
-      this.globalData.userInfo = userInfo ? JSON.parse(userInfo) : {};
-    }
+    // this.globalData.isLog = !!userInfo && util.checkLogin(token, expiresTime,true);
+    // if (this.globalData.isLog) {
+    //   this.globalData.token = token;
+    //   this.globalData.expiresTime = expiresTime;
+    //   this.globalData.userInfo = userInfo ? JSON.parse(userInfo) : {};
+    // }
 
     if (option.query.hasOwnProperty('scene')){
       switch (option.scene) {

@@ -150,7 +150,6 @@ Page({
     var status = false;
     var index = event.currentTarget.dataset.index;
     var item = that.data.cartList.valid[index];
-    console.log(item);
     item.cart_num = item.cart_num - 1;
     if (item.cart_num < 1) status = true;
     if (item.cart_num <= 1) { 
@@ -261,6 +260,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    // console.log(app.globalData.isLog)
     app.checkLogin_status();
     if (app.globalData.isLog == true) {
       this.getHostProduct();
