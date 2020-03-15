@@ -4,7 +4,6 @@ import { getLogo } from '../../api/api.js';
 import { login } from '../../api/user.js';
 
 let app = getApp();
-
 Component({
   properties: {
     iShidden: {
