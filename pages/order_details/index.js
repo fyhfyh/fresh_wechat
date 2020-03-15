@@ -141,6 +141,10 @@ Page({
   getUserInfo:function(){
     let that = this;
     getUserInfo().then(res=>{
+      if (res.data.code == '410000' || res.data.code == '410001' || res.data.code == '410002') {
+        wx.redirectTo({
+          url: '/pages/user_login/index',
+        })
       that.data.payMode[1].number = res.data.now_money;
       that.setData({ payMode: that.data.payMode });
     })

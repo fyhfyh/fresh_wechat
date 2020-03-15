@@ -52,6 +52,10 @@ Page({
     var that = this;
     if (this.data.MyMenus.length) return;
     getMenuList().then(res=>{
+      if (res.data.code == '410000' || res.data.code == '410001' || res.data.code == '410002') {
+        wx.redirectTo({
+          url: '/pages/user_login/index',
+        })
       that.setData({ MyMenus: res.data.routine_my_menus });
     });
   },
@@ -61,7 +65,11 @@ Page({
   getUserInfo:function(){
     var that=this;
     getUserInfo().then(res=>{
-
+      if (res.data.code == '410000' || res.data.code == '410001' || res.data.code == '410002'){
+        wx.redirectTo({
+          url: '/pages/user_login/index',
+        })
+      }
       that.setData({ userInfo: res.data, loginType: res.data.login_type, orderStatusNum: res.data.orderStatusNum});
     });
   },

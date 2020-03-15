@@ -202,6 +202,7 @@ Page({
   getCartList: function () {
     var that = this;
     getCartList().then(res=>{
+      
       var cartList = res.data;
       var valid = cartList.valid;
       var numSub = [{ numSub: true }, { numSub: false }];
