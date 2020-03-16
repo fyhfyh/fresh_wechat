@@ -57,6 +57,7 @@ Page({
           url: '/pages/user_login/index',
         })
       that.setData({ MyMenus: res.data.routine_my_menus });
+    }
     });
   },
   /**
