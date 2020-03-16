@@ -145,9 +145,10 @@ Page({
         wx.redirectTo({
           url: '/pages/user_login/index',
         })
+      
+    }
       that.data.payMode[1].number = res.data.now_money;
       that.setData({ payMode: that.data.payMode });
-    }
     })
   },
   /**

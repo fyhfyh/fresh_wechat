@@ -55,9 +55,9 @@ Page({
       if (res.data.code == '410000' || res.data.code == '410001' || res.data.code == '410002') {
         wx.redirectTo({
           url: '/pages/user_login/index',
-        })
-      that.setData({ MyMenus: res.data.routine_my_menus });
+        }) 
     }
+      that.setData({ MyMenus: res.data.routine_my_menus });
     });
   },
   /**
