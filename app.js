@@ -148,7 +148,7 @@ App({
     if (!wx.getStorageSync(CACHE_USERINFO) || wx.getStorageSync(CACHE_EXPIRES_TIME) < newTime ) {
      wx.showToast({
         title: '登录过期！',
-       icon: 'none',
+        icon: 'none',
         duration: 3000
       })
       wx.redirectTo({
