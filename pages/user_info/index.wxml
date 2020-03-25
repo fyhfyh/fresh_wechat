@@ -66,6 +66,12 @@
             点击管理<text class="iconfont icon-xiangyou"></text>
           </view>
         </view>
+         <view class='item acea-row row-between-wrapper'>
+          <view>登录过期时间</view>
+         <view class="input" bindtap="Setting">
+            <text>{{exp}}</text>
+          </view>
+        </view>
         <view class="item acea-row row-between-wrapper" wx:if="{{userInfo.phone && userInfo.user_type == 'h5'}}">
           <view>密码</view>
           <navigator url="/pages/user_pwd_edit/index" hover-class="none" class="input">

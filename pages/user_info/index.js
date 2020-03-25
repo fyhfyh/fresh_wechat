@@ -94,11 +94,28 @@ Page({
       });
     }
   },
+  /** 时间戳转日期 格式2017-01-20 00:00:00*/
+  getLocalTime: function (ns) {
+    //needTime是整数，否则要parseInt转换  
+    var time = new Date(parseInt(ns) * 1000); //根据情况*1000
+    var y = time.getFullYear();
+    var m = time.getMonth() + 1;
+    var d = time.getDate();
+    var h = time.getHours();
+    var mm = time.getMinutes();
+    var s = time.getSeconds();
+    return y + '-' + this.add0(m) + '-' + this.add0(d) + ' ' + this.add0(h) + ':' + this.add0(mm) + ':' + this.add0(s);
+  },
+  //小于10的补零操作
+  add0: function (m) {
+    return m < 10 ? '0' + m : m
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var allStr = this.getLocalTime(wx.getStorageSync(CACHE_EXPIRES_TIME));
+    this.setData({ exp: allStr })
   },
   getPhoneNumber:function(e){
     var detail = e.detail, cache_key = wx.getStorageSync('cache_key'),that=this;

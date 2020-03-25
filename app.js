@@ -144,7 +144,7 @@ App({
 
   checkLogin_status(){
     let newTime = Math.round(new Date() / 1000);
-    console.log(wx.getStorageSync(CACHE_EXPIRES_TIME))
+    // console.log(wx.getStorageSync(CACHE_EXPIRES_TIME))
     if (!wx.getStorageSync(CACHE_USERINFO) || wx.getStorageSync(CACHE_EXPIRES_TIME) < newTime ) {
      wx.showToast({
         title: '登录过期！',

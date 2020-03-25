@@ -128,8 +128,6 @@ const checkLogin = function (token, expiresTime, isLog)
   let res2 = res && res1;
   if (res2){
     let newTime=Math.round(new Date() / 1000);
-    console.log(newTime);
-    console.log(expiresTime);
     
     if (expiresTime < newTime) return false;
   }
