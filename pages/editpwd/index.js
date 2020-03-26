@@ -1,6 +1,7 @@
 const app = getApp();
 import { phoneRegisterReset, registerVerify } from '../../api/api.js';
 import { editpwd } from '../../api/user.js';
+import { CACHE_USERINFO, CACHE_TOKEN, CACHE_EXPIRES_TIME } from '../../config.js';
 Page({
 
   /**
@@ -46,7 +47,7 @@ Page({
     let that = this;
     let password = that.data.password;
     let qr_password = that.data.qr_password;
-    let userinfo = getApp().globalData.userInfo; 
+    let userinfo = JSON.parse(wx.getStorageSync(CACHE_USERINFO)) ; 
     let uid = userinfo.uid;
     if(!password){
       wx.showToast({
