@@ -83,11 +83,11 @@ Page({
 
   },
   onShow:function(){
-    let newTime = Math.round(new Date() / 1000); 
-    if (wx.getStorageSync(CACHE_USERINFO) && wx.getStorageSync(CACHE_EXPIRES_TIME) > newTime) {
-      wx.switchTab({
-        url: '/pages/index/index',
-      })
-    } 
+    // let newTime = Math.round(new Date() / 1000); 
+    // if (wx.getStorageSync(CACHE_USERINFO) && wx.getStorageSync(CACHE_EXPIRES_TIME) > newTime) {
+    //   wx.switchTab({
+    //     url: '/pages/index/index',
+    //   })
+    // } 
   }
 })

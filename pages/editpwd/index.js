@@ -46,7 +46,8 @@ Page({
     let that = this;
     let password = that.data.password;
     let qr_password = that.data.qr_password;
-    let uid = this.data.userInfo.uid;
+    let userinfo = getApp().globalData.userInfo; 
+    let uid = userinfo.uid;
     if(!password){
       wx.showToast({
         title: '请输入新密码!',
@@ -63,7 +64,6 @@ Page({
       })
       return false;
     }
-
     editpwd({ uid: uid, password: password }).then(res => {
      app.Tips({ title: res.msg, icon: 'success' });
       wx.redirectTo({
