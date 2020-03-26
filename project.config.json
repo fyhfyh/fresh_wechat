@@ -93,6 +93,20 @@
 					"pathName": "pages/goods_return/index",
 					"query": "order_id=wx158376675252549575",
 					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "核销",
+					"pathName": "/customer/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "修改密码",
+					"pathName": "pages/editpwd/index",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

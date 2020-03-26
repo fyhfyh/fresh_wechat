@@ -14,6 +14,14 @@ export function account_login(data) {
 }
 
 /**
+ * 客户密码修改
+ * @param data object 小程序客户密码修改
+ */
+export function editpwd(data) {
+  return request.post("editpwd", data, { noAuth: true });
+}
+
+/**
  * 小程序用户登录
  * @param data object 小程序用户登陆信息
  */

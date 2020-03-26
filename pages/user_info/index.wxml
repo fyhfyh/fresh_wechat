@@ -68,7 +68,7 @@
         </view>
          <view class='item acea-row row-between-wrapper'>
           <view>登录过期时间</view>
-         <view class="input" bindtap="Setting">
+         <view class="input">
             <text>{{exp}}</text>
           </view>
         </view>
