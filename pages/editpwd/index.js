@@ -35,7 +35,7 @@ Page({
   },
 
   onLoadFun: function (e) {
-    let userInfo = e.detail;
+    let userInfo = JSON.parse(wx.getStorageSync(CACHE_USERINFO));
     let account = userInfo.account;
     this.setData({ userInfo: e.detail, account: account });
   },

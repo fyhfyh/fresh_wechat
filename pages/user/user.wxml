@@ -40,7 +40,7 @@
            <view class='allOrder' data-url='/pages/order_list/index' bindtap='goPages'>全部订单<text class='iconfont icon-jiantou'></text></view>
         </view>
         <view class='orderState acea-row row-middle'>
-           <view class='item' data-url='/pages/order_list/index?status=0' bindtap='goPages'>
+           <view class='item' data-url='/pages/order_list/index?status=1' bindtap='goPages'>
               <!-- <view class='pictrue'>
                 <image src='/images/dfk.png'></image>
                 <text class="order-status-num" wx:if="{{orderStatusNum.unpaid_count > 0}}">{{ orderStatusNum.unpaid_count }}</text>

@@ -21,7 +21,7 @@ Page({
     loadTitle:'加载更多',//提示语
     orderList:[],//订单数组
     orderData:{},//订单详细统计
-    orderStatus:0,//订单状态
+    orderStatus:1,//订单状态
     page:1,
     limit:10,
     isClose:false,
@@ -75,6 +75,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options.status)
     if (options.status) this.setData({ orderStatus:options.status});
     this.setData({ 'parameter.return': options.is_return ? '0' : '1'});
   },

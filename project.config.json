@@ -107,6 +107,13 @@
 					"pathName": "pages/editpwd/index",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "pages/order_list/index",
+					"pathName": "pages/order_list/index",
+					"query": "status=1",
+					"scene": null
 				}
 			]
 		}
