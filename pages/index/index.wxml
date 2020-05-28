@@ -1,3 +1,10 @@
+<view wx:if='{{pstatus==1}}'></view>
+
+
+
+
+<view wx:else>
+
 <navbar parameter='{{parameter}}' logoUrl="{{logoUrl}}"></navbar>
 <view class='index'>
     <view class="indexTip" style="top:{{navH+13}}rpx" hidden="{{iShidden}}">
@@ -182,3 +189,5 @@
 </view>
 <coupon-window window='{{window}}' couponList="{{couponList}}" bind:onColse="onColse"></coupon-window>
 <home></home>
+
+</view>

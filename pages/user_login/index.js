@@ -1,8 +1,8 @@
 // pages/userlogin/index.js
 const app = getApp();
 import { CACHE_USERINFO, CACHE_TOKEN, CACHE_EXPIRES_TIME } from '../../config.js';
-import { account_login } from '../../api/user.js';
-
+import { account_login} from '../../api/user.js';
+import { asas } from '../../api/api.js';
 Page({
 
   /**
@@ -13,9 +13,48 @@ Page({
     account:'',
     password:'',
     errorSum: 0,
-    errorNum: 3
+    errorNum: 3,
+    parameter: {
+      'navbar': '1',
+      'return': '0',
+      'title': '我的文章',
+      'color': true,
+      'class': '0'
+    },
+    imgUrls: [
+      'http://img4.imgtn.bdimg.com/it/u=3532249801,4016244769&fm=26&gp=0.jpg',
+      'http://hbimg.b0.upaiyun.com/a3e592c653ea46adfe1809e35cd7bc58508a6cb94307-aaO54C_fw658',
+      'http://hbimg.b0.upaiyun.com/3b48fa78946e44a72262777268f6c638ef24830920e4d-yBuKnn_fw658'
+    ],
+    indicatorDots: false,
+    autoplay: true,
+    interval: 4000,
+    duration: 800,
+    swiperCurrent: 0,
+    pianlist:[
+      { id: 1, thumb: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3375391431,1052139721&fm=26&gp=0.jpg', title:'1122312313',content:'sdasdasdadadasda'},
+      { id: 1, thumb: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3375391431,1052139721&fm=26&gp=0.jpg', title: '1122312313', content: 'sdasdasdadadasda' },
+      { id: 1, thumb: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3375391431,1052139721&fm=26&gp=0.jpg', title: '1122312313', content: 'sdasdasdadadasda' },
+       { id: 1, thumb: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3375391431,1052139721&fm=26&gp=0.jpg', title: '1122312313', content: 'sdasdasdadadasda' },
+      { id: 1, thumb: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3375391431,1052139721&fm=26&gp=0.jpg', title: '1122312313', content: 'sdasdasdadadasda' },
+    ],
   },
 
+  onLoad: function (options) {
+    var that = this;
+    asas().then(res => {
+      that.setData({ pstatus: res.data.status });
+    })
+  },
+
+  swiperChange(e) {
+    let current = e.detail.current;
+    // console.log(current, '轮播图')
+    let that = this;
+    that.setData({
+      swiperCurrent: current,
+    })
+  },
 /**
  * 获取账号
  */

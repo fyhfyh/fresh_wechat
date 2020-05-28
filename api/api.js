@@ -13,6 +13,9 @@ export function getIndexData()
   return request.get("index",{},{ noAuth : true});
 }
 
+export function asas() {
+  return request.get("pian", {}, { noAuth: true });
+}
 /**
  * 获取登录授权login
  * 

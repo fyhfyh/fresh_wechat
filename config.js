@@ -1,6 +1,7 @@
 module.exports = {
   // 请求域名 格式： https://您的域名
   HTTP_REQUEST_URL:'https://msg.shouting.ltd',
+  // HTTP_REQUEST_URL: 'http://fresh.com',
   // Socket链接 暂不做配置
   WSS_SERVER_URL:'',
 

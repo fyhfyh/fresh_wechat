@@ -1,6 +1,6 @@
 const app = getApp();
 
-import { getIndexData, getCoupons ,getTemlIds} from '../../api/api.js';
+import { getIndexData, getCoupons ,getTemlIds,asas} from '../../api/api.js';
 import { CACHE_SUBSCRIBE_MESSAGE } from '../../config.js';
 import Util from '../../utils/util.js';
 
@@ -48,6 +48,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
+    asas().then(res => {
+      that.setData({ pstatus: res.data.status });
+    })
     this.setData({
       navH: app.globalData.navHeight
     });
