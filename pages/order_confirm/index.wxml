@@ -1,10 +1,13 @@
 <navbar parameter='{{parameter}}'></navbar>
 <view class='order-submission'>
   <view class="allAddress" style="{{store_self_mention ? '':'padding-top:10rpx'}}">
+   <view  wx:if="{{shippingType==0}}">
     <view class="nav acea-row">
       <view class="item font-color {{shippingType == 0 ? 'on' : 'on2'}}" data-index="0" bindtap="addressType" wx:if='{{store_self_mention}}'></view>
       <view class="item font-color {{shippingType == 1 ? 'on' : 'on2'}}" data-index="1" bindtap="addressType" wx:if='{{store_self_mention}}'></view>
     </view>
+    </view>
+    <view wx:else></view>
     <view class='address acea-row row-between-wrapper' bindtap='onAddress' wx:if='{{shippingType == 0}}'>
       <view class='addressCon' wx:if="{{addressInfo.real_name}}">
         <view class='name'>{{addressInfo.real_name}}

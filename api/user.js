@@ -14,6 +14,13 @@ export function account_login(data) {
 }
 
 /**
+ * 配送方式修改
+ */
+export function psong() {
+  return request.get("psong", {}, { noAuth: true });
+}
+
+/**
  * 客户密码修改
  * @param data object 小程序客户密码修改
  */

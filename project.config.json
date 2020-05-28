@@ -67,10 +67,10 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 1,
 					"name": "提交订单",
 					"pathName": "pages/order_confirm/index",
-					"query": "",
+					"query": "cartId=65",
 					"scene": null
 				},
 				{

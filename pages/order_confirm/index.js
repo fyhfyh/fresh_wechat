@@ -1,5 +1,5 @@
 import { orderConfirm, getCouponsOrderPrice, orderCreate, postOrderComputed} from '../../api/order.js';
-import { getAddressDefault, getAddressDetail } from '../../api/user.js';
+import { getAddressDefault, getAddressDetail, psong } from '../../api/user.js';
 import { openPaySubscribe } from '../../utils/SubscribeMessage.js';
 import util from '../../utils/util.js';
 
@@ -67,6 +67,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    psong().then(res => {
+      this.setData({ shippingType:res.data.status });
+    })
     app.checkLogin_status();
     this.setData({ textareaStatus: true });
     if (app.globalData.isLog && this.data.isClose && this.data.toPay==false) {
